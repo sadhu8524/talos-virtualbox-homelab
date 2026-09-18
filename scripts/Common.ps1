@@ -23,7 +23,7 @@ function Invoke-VBoxManage {
     & $vbox @Arguments
     $exitCode = $LASTEXITCODE
     if ($exitCode -ne 0 -and -not $IgnoreExitCode) {
-        throw "VBoxManage failed with exit code $exitCode: $($Arguments -join ' ')"
+        throw "VBoxManage failed with exit code ${exitCode}: $($Arguments -join ' ')"
     }
 }
 
@@ -61,4 +61,3 @@ function Wait-TcpPort {
 
     throw "Timed out waiting for ${ComputerName}:$Port."
 }
-

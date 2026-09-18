@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
       - name: Format
-        run: terraform fmt -check -recursive
+        run: terraform fmt -diff -check -recursive
       - name: Initialize
         working-directory: terraform
         run: terraform init -backend=false
@@ -45,4 +45,3 @@ jobs:
             $errors | Format-List
             exit 1
           }
-
