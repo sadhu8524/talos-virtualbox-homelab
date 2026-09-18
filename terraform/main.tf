@@ -1,18 +1,18 @@
 resource "terraform_data" "virtualbox_lab" {
   input = {
-    cluster_name       = var.cluster_name
-    nodes_json         = local.node_spec_json
-    vm_cpus            = var.vm_cpus
-    vm_memory_mb       = var.vm_memory_mb
-    disk_size_mb       = var.disk_size_mb
-    host_only_adapter  = var.host_only_adapter
-    host_only_gateway  = var.host_only_gateway
-    host_only_netmask  = var.host_only_netmask
-    talos_version      = var.talos_version
-    talos_iso_path     = var.talos_iso_path
-    install_disk       = var.install_disk
-    auto_bootstrap     = var.auto_bootstrap
-    repository_root    = local.repository_root
+    cluster_name      = var.cluster_name
+    nodes_json        = local.node_spec_json
+    vm_cpus           = var.vm_cpus
+    vm_memory_mb      = var.vm_memory_mb
+    disk_size_mb      = var.disk_size_mb
+    host_only_adapter = var.host_only_adapter
+    host_only_gateway = var.host_only_gateway
+    host_only_netmask = var.host_only_netmask
+    talos_version     = var.talos_version
+    talos_iso_path    = var.talos_iso_path
+    install_disk      = var.install_disk
+    auto_bootstrap    = var.auto_bootstrap
+    repository_root   = local.repository_root
   }
 
   provisioner "local-exec" {
