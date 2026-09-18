@@ -1,0 +1,14 @@
+.terraform/
+.cache/
+.vms/
+*.tfstate
+*.tfstate.*
+*.tfplan
+terraform.tfvars
+crash.log
+talos/generated/
+kubeconfig
+*.iso
+*.vdi
+.idea/
+.vscode/
